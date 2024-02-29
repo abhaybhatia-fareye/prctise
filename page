@@ -1,165 +1,138 @@
-<div class="flex  justify-content: space-around">
-        
+<div class=" bg-white">
+  <div id="upper" class="fixed top-0 w-full">
+    <nav class="bg-white h-20  flex items-center justify-start  pr-6 w-full  lg:hidden">
+      <div class="text-black flex m-5">
+          <button class="lg:hidden mr-4" onclick="Openbar()">open  </button>
+          <h2 class="text-5xl text-blue-600 ml-5 font-bold">FarEye</h2>
+      </div>
+  </nav>
+  
+  <nav class="bg-white h-20 p-6 flex items-center justify-center  px-6 w-full             hidden lg:flex">
+      <div class="text-black">
+          <ul class="flex space-x-6">
+              <li><button class="lg:hidden" onclick="Openbar()">open  </button></li>
+  
+              <li class="font-medium hover:text-gray-800 transition duration-300">Home</li>
+              <li class="font-medium hover:text-gray-800 transition duration-300">About</li>
+              <li class="font-medium hover:text-gray-800 transition duration-300">Company</li>
+              <li class="font-medium hover:text-gray-800 transition duration-300">Company</li>
+              
+          </ul>
+      </div>
+  </nav>
+  
+  </div>
+
+
+  <div id="middle" class="flex">
     <div class="md:bg-slate-100 bg-white lg:w-[15%]  w-0 md:w-0">
 
 
-        <div id="sidebar ">
-            <span class=" text-white text-4xl top-5 left-4 cursor-pointer" onclick="Openbar()">
-              <i id="aa" class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
-            </span>
-            <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000
-              p-2 w-[288px] overflow-y-auto text-center bg-gray-100 shadow h-screen">
-              <div class="text-gray-900 text-xl">
-                <!-- <div class="p-2.5 mt-1 flex items-center rounded-md ">
-                  <i class="bi bi-app-indicator px-2 py-1 bg-blue-600 rounded-md"></i>
-                </div> -->
-                <div class="p-2.5 mt-1 flex items-center rounded-md ">
-                  <button type="button" onclick="closeSidebar()"> <i class="bi bi-app-indicator lg:hidden    px-2 py-1 bg-blue-600 rounded-md"></i></button>
-                
-                  <h1 class="text-[15px]  ml-3 text-xl text-gray-900 font-bold">Tailwindbar</h1>
-                </div></div>
+      <div id="sidebar ">
+          <span class=" text-white text-4xl top-5 left-4 cursor-pointer" onclick="Openbar()">
+            <i id="aa" class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
+          </span>
+          <div class="sidebar fixed top-20 bottom-0 lg:left-0 left-[-300px] duration-1000
+            p-2 w-[288px] overflow-y-auto text-center bg-gray-100 shadow h-screen">
+            <div class="text-gray-900 text-xl">
+              
+              <div class="p-2.5 mt-1 flex items-center rounded-md ">
+                <button type="button" onclick="closeSidebar()"> <i class="bi bi-app-indicator lg:hidden    px-2 py-1 bg-blue-600 rounded-md"></i></button>
+              
+                <h1 class="text-[15px]  ml-3 text-xl text-gray-900 font-bold">Tailwindbar</h1>
+              </div></div>
 
-                <hr class="my-2 text-gray-600">
-                
-                <div>
-                  <div class="p-2.5 mt-3 flex items-center rounded-md 
-                  px-4 duration-300 cursor-pointer  bg-gray-200">
-                    <i class="bi bi-search text-sm"></i>
-                    <input class="text-[15px] ml-4 w-full bg-transparent focus:outline-none" placeholder="Serach" />
-                  </div>
-          
-                  <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
-                    <i class="bi bi-house-door-fill"></i>
-                    <span class="text-[15px] ml-4 text-gray-900">Home</span>
-                  </div>
-                  <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
-                    <i class="bi bi-bookmark-fill"></i>
-                    <span class="text-[15px] ml-4 text-gray-900">Bookmark</span>
-                  </div>
-                  <hr class="my-4 text-gray-600">
-                  <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
-                    <i class="bi bi-envelope-fill"></i>
-                    <span class="text-[15px] ml-4 text-gray-900">Messages</span>
-                  </div>
-          
-                  <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
-                    <i class="bi bi-chat-left-text-fill"></i>
-                    <div class="flex justify-between w-full items-center" onclick="dropDown()">
-                      <span class="text-[15px] ml-4 text-gray-900">Chatbox</span>
-                      <span class="text-sm rotate-180" id="arrow">
-                        <i class="bi bi-chevron-down"></i>
-                      </span>
-                    </div>
-                  </div>
-                  <div class=" leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-900" id="submenu">
-                    <h1 class="cursor-pointer p-2 hover:bg-gray-700  rounded-md mt-1">Social</h1>
-                    <h1 class="cursor-pointer p-2 hover:bg-gray-700  rounded-md mt-1">Personal</h1>
-                    <h1 class="cursor-pointer p-2 hover:bg-gray-700  rounded-md mt-1">Friends</h1>
-                  </div> 
-                  <div class="p-2.5 lg:hidden mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
-                    <i class="bi bi-envelope-fill"></i>
-                    <span class="text-[15px] ml-4 text-gray-900">Home</span>
-                  </div>
-                  <div class="p-2.5 lg:hidden mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
-                    <i class="bi bi-envelope-fill"></i>
-                    <span class="text-[15px] ml-4 text-gray-900">About</span>
-                  </div>
-                  <div class="p-2.5 lg:hidden mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
-                    <i class="bi bi-envelope-fill"></i>
-                    <span class="text-[15px] ml-4 text-gray-900">Company</span>
-                  </div>
-          
-                  <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
-                    <i class="bi bi-box-arrow-in-right"></i>
-                    <span class="text-[15px] ml-4 text-gray-900">Logout</span>
-                  </div>
-          
+              <hr class="my-2 text-gray-600">
+              
+              <div>
+                <div class="p-2.5 mt-3 flex items-center rounded-md 
+                px-4 duration-300 cursor-pointer  bg-gray-200">
+                  <i class="bi bi-search text-sm"></i>
+                  <input class="text-[15px] ml-4 w-full bg-transparent focus:outline-none" placeholder="Serach" />
                 </div>
+        
+                <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+                  <i class="bi bi-house-door-fill"></i>
+                  <span class="text-[15px] ml-4 text-gray-900">Home</span>
+                </div>
+                <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+                  <i class="bi bi-bookmark-fill"></i>
+                  <span class="text-[15px] ml-4 text-gray-900">Bookmark</span>
+                </div>
+                <hr class="my-4 text-gray-600">
+                <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+                  <i class="bi bi-envelope-fill"></i>
+                  <span class="text-[15px] ml-4 text-gray-900">Messages</span>
+                </div>
+        
+                <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+                  <i class="bi bi-chat-left-text-fill"></i>
+                  <div class="flex justify-between w-full items-center" onclick="dropDown()">
+                    <span class="text-[15px] ml-4 text-gray-900">Chatbox</span>
+                    <span class="text-sm rotate-180" id="arrow">
+                      <i class="bi bi-chevron-down"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class=" leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-900" id="submenu">
+                  <h1 class="cursor-pointer p-2 hover:bg-gray-700  rounded-md mt-1">Social</h1>
+                  <h1 class="cursor-pointer p-2 hover:bg-gray-700  rounded-md mt-1">Personal</h1>
+                  <h1 class="cursor-pointer p-2 hover:bg-gray-700  rounded-md mt-1">Friends</h1>
+                </div> 
+                <div class="p-2.5 lg:hidden mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+                  <i class="bi bi-envelope-fill"></i>
+                  <span class="text-[15px] ml-4 text-gray-900">Home</span>
+                </div>
+                <div class="p-2.5 lg:hidden mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+                  <i class="bi bi-envelope-fill"></i>
+                  <span class="text-[15px] ml-4 text-gray-900">About</span>
+                </div>
+                <div class="p-2.5 lg:hidden mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+                  <i class="bi bi-envelope-fill"></i>
+                  <span class="text-[15px] ml-4 text-gray-900">Company</span>
+                </div>
+        
+                <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+                  <i class="bi bi-box-arrow-in-right"></i>
+                  <span class="text-[15px] ml-4 text-gray-900">Logout</span>
+                </div>
+        
               </div>
             </div>
-        
-        </div>
+          </div>
+      
+      </div>
+  </div>
+<div class="w-[30vw]"></div>
 
-    
-<!-- right side  -->
-    
-    <div class=" lg:w-[84.6%] md:w-full">
+  <main class="bg-white border-spacing-1 md:px-32 h-fit py-11 lg:w-[80vw] ml-[18%]">
+    <img class="md:w-[90%] md:h-[70vh]" src="https://images.klipfolio.com/website/public/5a275fee-d42b-4f31-91f6-8148d4d729af/executive%20dashboard.png" alt="">
 
-
-        <nav class="bg-white h-20  flex items-center justify-start  pr-6  lg:hidden">
-            <div class="text-black flex m-5">
-                <button class="lg:hidden mr-4" onclick="Openbar()">open  </button>
-                <h2 class="text-5xl text-blue-600 ml-5 font-bold">FarEye</h2>
-            </div>
-        </nav>
-
-        <nav class="bg-white h-20 p-6 flex items-center justify-center  px-6             hidden lg:flex">
-            <div class="text-black">
-                <ul class="flex space-x-6">
-                    <li><button class="lg:hidden" onclick="Openbar()">open  </button></li>
-
-                    <li class="font-medium hover:text-gray-800 transition duration-300">Home</li>
-                    <li class="font-medium hover:text-gray-800 transition duration-300">About</li>
-                    <li class="font-medium hover:text-gray-800 transition duration-300">Company</li>
-                    <!-- New button to perform the same action as the original button with id="aa" -->
-                </ul>
-            </div>
-        </nav>
-        
-        
-
-
-
-
-
-        <main class="bg-white border-spacing-1 md:px-32 h-fit py-11  ">
-          <img class="md:w-[90%] md:h-[70vh]" src="https://images.klipfolio.com/website/public/5a275fee-d42b-4f31-91f6-8148d4d729af/executive%20dashboard.png" alt="">
-
-          <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque ut esse assumenda, quisquam tempora rerum nisi dolorum fugit enim, reiciendis quas nam alias sapiente consectetur unde. Possimus tempore numquam fugiat quis mollitia aut, aspernatur minima tempora natus optio reprehenderit, aliquam quia labore ducimus rerum totam delectus enim odio? Minima ex quos itaque, consequuntur, aliquid dolorum maiores quidem reprehenderit corrupti nesciunt incidunt sunt in, amet provident. Laboriosam nesciunt corrupti ad esse ratione adipisci iure a voluptates. Fugiat, aut vitae. Sapiente repellat iusto voluptatibus, magni dignissimos quos modi a facilis dolore voluptatem unde libero porro! Repellendus, ipsa! Cum amet in fugiat voluptatum quo dignissimos iusto reprehenderit eos aliquid ullam praesentium a dicta, rem consectetur delectus nostrum ut commodi sit veritatis beatae omnis temporibus. Quod sint reprehenderit amet? Doloribus quibusdam modi nostrum recusandae, pariatur voluptatum sapiente consequuntur nisi ipsum expedita suscipit veritatis eaque inventore dolorum explicabo doloremque rerum consequatur quisquam vitae ad similique. Quisquam minima enim omnis voluptates, culpa ut corrupti, ratione nesciunt quam, esse autem impedit asperiores. Voluptatem tenetur culpa nihil eligendi! Aperiam, ducimus. Harum alias sequi perspiciatis sint corrupti consectetur corporis sed cumque nesciunt ea, non voluptatum doloremque vel dignissimos assumenda, molestiae tempore ex vero saepe repellendus fugit minima autem porro nam. Earum voluptatum vel voluptate, totam eum odio asperiores deleniti in recusandae minus accusamus perspiciatis. Quas sapiente autem vitae molestias doloribus eveniet? Ullam, eaque. Vitae temporibus aperiam illo doloribus earum expedita sequi corporis excepturi, totam provident delectus blanditiis nemo neque commodi voluptatem repudiandae explicabo veritatis libero natus ipsum harum numquam praesentium. Laborum consequatur maiores debitis a impedit. Architecto aspernatur delectus corrupti porro corporis repudiandae, ipsa non vel! Corporis illo repudiandae ipsum maiores exercitationem distinctio fugit facere totam quae alias nobis asperiores, saepe perspiciatis sequi corrupti quam, fuga quos impedit laborum ex! Blanditiis veniam in rem fugiat? Deserunt accusantium, tempora, voluptate modi eligendi esse, laudantium ab saepe debitis laboriosam impedit molestias quia pariatur libero quam repellendus consequuntur nihil hic tenetur aut unde! Ducimus consequatur explicabo ipsa, odit excepturi tempore illo nobis, repellat nostrum sint omnis repellendus culpa modi aut et ea aliquid maxime deserunt sit ipsum minima quae molestiae, officia porro! Iste ad eligendi adipisci id quod odit repellendus facilis? Distinctio aspernatur eos mollitia facilis. Natus dolorum odit ipsum voluptatibus. Aperiam, maiores nostrum natus accusamus ipsa amet non saepe hic! Exercitationem voluptatum repudiandae unde ea tempore libero, excepturi velit voluptates eius iure inventore nisi aliquid veritatis quibusdam quo qui incidunt impedit molestias delectus atque dolorem molestiae, consequuntur a in. Delectus quae eos perspiciatis non quos quo ea? Eligendi nihil deserunt neque nisi perferendis sequi omnis maxime delectus. Totam, placeat eum atque doloribus nesciunt quae expedita consequuntur! Ut ducimus, impedit eaque velit placeat, mollitia minus ipsam, possimus perferendis ullam incidunt dignissimos facilis odio? Odit sed quod tempora amet impedit eum ab sint quam iste velit! Modi architecto laudantium aut temporibus odio nesciunt similique totam corrupti, exercitationem necessitatibus atque quisquam amet fugiat tempore nam! Distinctio assumenda recusandae voluptates fugiat provident! Nihil et ullam at, vero itaque odit? Obcaecati error excepturi ad rem. Incidunt?</h3>
-        </main >
-
-        
-    </div>
+    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque ut esse assumenda, quisquam tempora rerum nisi dolorum fugit enim, reiciendis quas nam alias sapiente consectetur unde. Possimus tempore numquam fugiat quis mollitia aut, aspernatur minima tempora natus optio reprehenderit, aliquam quia labore ducimus rerum totam delectus enim odio? Minima ex quos itaque, consequuntur, aliquid dolorum maiores quidem reprehenderit corrupti nesciunt incidunt sunt in, amet provident. Laboriosam nesciunt corrupti ad esse ratione adipisci iure a voluptates. Fugiat, aut vitae. Sapiente repellat iusto voluptatibus, magni dignissimos quos modi a facilis dolore voluptatem unde libero porro! Repellendus, ipsa! Cum amet in fugiat voluptatum quo dignissimos iusto reprehenderit eos aliquid ullam praesentium a dicta, rem consectetur delectus nostrum ut commodi sit veritatis beatae omnis temporibus. Quod sint reprehenderit amet? Doloribus quibusdam modi nostrum recusandae, pariatur voluptatum sapiente consequuntur nisi ipsum expedita suscipit veritatis eaque inventore dolorum explicabo doloremque rerum consequatur quisquam vitae ad similique. Quisquam minima enim omnis voluptates, culpa ut corrupti, ratione nesciunt quam, esse autem impedit asperiores. Voluptatem tenetur culpa nihil eligendi! Aperiam, ducimus. Harum alias sequi perspiciatis sint corrupti consectetur corporis sed cumque nesciunt ea, non voluptatum doloremque vel dignissimos assumenda, molestiae tempore ex vero saepe repellendus fugit minima autem porro nam. Earum voluptatum vel voluptate, totam eum odio asperiores deleniti in recusandae minus accusamus perspiciatis. Quas sapiente autem vitae molestias doloribus eveniet? Ullam, eaque. Vitae temporibus aperiam illo doloribus earum expedita sequi corporis excepturi, totam provident delectus blanditiis nemo neque commodi voluptatem repudiandae explicabo veritatis libero natus ipsum harum numquam praesentium. Laborum consequatur maiores debitis a impedit. Architecto aspernatur delectus corrupti porro corporis repudiandae, ipsa non vel! Corporis illo repudiandae ipsum maiores exercitationem distinctio fugit facere totam quae alias nobis asperiores, saepe perspiciatis sequi corrupti quam, fuga quos impedit laborum ex! Blanditiis veniam in rem fugiat? Deserunt accusantium, tempora, voluptate modi eligendi esse, laudantium ab saepe debitis laboriosam impedit molestias quia pariatur libero quam repellendus consequuntur nihil hic tenetur aut unde! Ducimus consequatur explicabo ipsa, odit excepturi tempore illo nobis, repellat nostrum sint omnis repellendus culpa modi aut et ea aliquid maxime deserunt sit ipsum minima quae molestiae, officia porro! Iste ad eligendi adipisci id quod odit repellendus facilis? Distinctio aspernatur eos mollitia facilis. Natus dolorum odit ipsum voluptatibus. Aperiam, maiores nostrum natus accusamus ipsa amet non saepe hic! Exercitationem voluptatum repudiandae unde ea tempore libero, excepturi velit voluptates eius iure inventore nisi aliquid veritatis quibusdam quo qui incidunt impedit molestias delectus atque dolorem molestiae, consequuntur a in. Delectus quae eos perspiciatis non quos quo ea? Eligendi nihil deserunt neque nisi perferendis sequi omnis maxime delectus. Totam, placeat eum atque doloribus nesciunt quae expedita consequuntur! Ut ducimus, impedit eaque velit placeat, mollitia minus ipsam, possimus perferendis ullam incidunt dignissimos facilis odio? Odit sed quod tempora amet impedit eum ab sint quam iste velit! Modi architecto laudantium aut temporibus odio nesciunt similique totam corrupti, exercitationem necessitatibus atque quisquam amet fugiat tempore nam! Distinctio assumenda recusandae voluptates fugiat provident! Nihil et ullam at, vero itaque odit? Obcaecati error excepturi ad rem. Incidunt?</h3>
     <footer class="bg-white flex justify-end bottom-0 fixed h-[8vh] w-full" >
       <p>nm,,,,,,,,,,</p>
   </footer>
+  </main >
 
+  
 
-
-
-
-
-  <script>
-    function dropDown() {
-        document.querySelector('#submenu').classList.toggle('hidden')
-
-        document.querySelector('#arrow').classList.toggle('rotate-0')
-    }
-
-    function Openbar() {
-        var sidebar = document.querySelector('.sidebar');
-        sidebar.classList.toggle('left-[-300px]');
-    }
-
-    function closeSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        sidebar.classList.add('left-[-300px]');
-    }
-
-
-    function updateMainClass() {
-    var mainTag = document.querySelector('main');
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-    // Set the class based on the screen width condition
-    mainTag.classList.remove('px-32', 'px-5');
-    mainTag.classList.add(screenWidth < 700 ? 'px-5' : 'px-32');
-  }
-
-  // Initial call to set the class on page load
-  updateMainClass();
-
-  // Event listener to update class on window resize
-  window.addEventListener('resize', updateMainClass);
-</script>
 </div>
+
+
+<div id="lower">
+ 
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
